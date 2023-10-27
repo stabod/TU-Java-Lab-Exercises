@@ -83,6 +83,24 @@ public class Exercises {
 
     }
 
+    //5
+    public static void sumMatrix(Scanner myscanner) {
+        int[][] arr = new int[3][3];
+        int sum = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Enter element at index[" + i + "][" + j + "]: ");
+                arr[i][j] = myscanner.nextInt();
+                if (i == j) { sum += arr[i][j]; } 
+                if (i + j == 2) { sum += arr[i][j]; }
+            } 
+        }
+
+        System.out.println("Sum of diagonals: " + sum);
+        System.out.println("Sum of diagonals without repeat: " + (sum - arr[1][1]));
+        
+    }
+
     //6
     public static void drawTriangle(Scanner myscanner) {
 
